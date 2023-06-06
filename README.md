@@ -1,66 +1,104 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# FizzBuzz
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Este es un proyecto de aprendizaje que implementa el juego matemático FizzBuzz. El objetivo de este proyecto es mejorar tus habilidades de programación y al enfrentarse al problema de generar una lista de números que siga las reglas del FizzBuzz.. 
 
-## About Laravel
+## Las Reglas del Juego
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Dada una sucesión de números naturales desde 1 hasta N, deben cumplirse las condiciones: 
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- Los números que sean múltiplos de 3 se cambian por Fizz.
+- Los números que sean múltiplos de 5 se cambian por Buzz.
+- Los números que sean múltiplos de 3 y 5 se cambian por FizzBuzz.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Al final la lista se presentaría, tal como el siguiente ejemplo:
 
-## Learning Laravel
+```
+    N = 15
+    1, 2, Fizz, 4, Buzz, Fizz, 7, 8, Fizz, Buzz, 11, Fizz, 13, 14, FizzBuzz
+```
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Instalación y uso
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Para utilizar este proyecto, sigue los siguientes pasos:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+1. Clona este repositorio en tu máquina local utilizando el siguiente comando:
+   `git clone https://github.com/Alexis79Bck/FizzBuzz_TDD.git`
 
-## Laravel Sponsors
+2. Ingresa al directorio del proyecto:
+   `cd FizzBuzz`
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+3. Instala las dependencias del proyecto utilizando Composer:
+   `composer install`
 
-### Premium Partners
+4. Ejecuta los tests para verificar que todo está funcionando correctamente:
+   `php artisan test`
+   o con este otro comando:
+   `vendor/bin/phpunit`
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+5. Una vez realizada las pruebas, puedes iniciar el proyecto de laravel por medio del siguiente comando:
+   `php artisan serve`
 
-## Contributing
+6. Ahora puedes visualizar la ejecución del proyecto.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Requisitos
 
-## Code of Conduct
+Este proyecto requiere PHP 8.0 o superior para ser ejecutado. Además, se recomienda tener instalado Composer para manejar las dependencias del proyecto.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Estructura del Proyecto
 
-## Security Vulnerabilities
+```
+FizzBuzz/
+├── app/
+│   ├── Classes
+│   │   └── FizzBuzz.php
+│   ├── Http
+│   │   └── Controller
+│   │       ├── ...
+│   │       └── FizzBuzzController.php
+│   └── ...
+├── resources/
+│   ├── ...
+│   └── views/
+│       ├── FizzBuzz_result.blade.php
+│       └── FizzBuzz.blade.php
+├── tests/
+│   ├── Feature/
+│   │   └── FizzBuzzFeatureTest.php
+│   └── Unit/
+│       └── FizzBuzzTest.php
+├── vendor/
+│   └── ...
+├── .gitignore
+├── composer.json
+├── composer.lock
+├── LICENSE.md
+├── phpunit.xml
+└── README.md
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- app/: Contiene la lógica del proyecto, incluyendo la clase FizzBuzz que genera la lista de números siguiendo las reglas del juego.
+- tests/: Contiene los tests del proyecto, separados en las carpetas Feature y Unit.
+- vendor/: Contiene las dependencias del proyecto instaladas por Composer.
+- .gitignore: Archivo que especifica los archivos y directorios que Git debe ignorar al hacer commits y push.
+- composer.json: Archivo que especifica las dependencias del proyecto y sus versiones.
+- composer.lock: Archivo generado automáticamente por Composer que especifica las versiones exactas de las dependencias instaladas.
+- phpunit.xml: Archivo de configuración para PHPUnit, la herramienta de testing utilizada en el proyecto.
+- README.md: Archivo que contiene la documentación del proyecto.
 
-## License
+## Objetivo
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Este proyecto fue desarrollado como parte de mi aprendizaje y mejora de mis habilidades de programación, con el objetivo de reforzar la práctica de las pruebas automatizadas. En particular, decidí implementar el juego FizzBuzz utilizando la metodología TDD (Test-Driven Development), que consiste en escribir primero los tests y luego el código que cumpla con esos tests.
+
+Para implementar este proyecto, utilicé el framework Laravel en su version 10 ya que tiene integrado PHPUnit, que es una herramienta popular para pruebas automatizadas en PHP. Utilicé las pruebas para guiar el desarrollo de la clase FizzBuzz y asegurarme de que generara la lista de números siguiendo las reglas del juego. También escribí pruebas adicionales para asegurarme de que el código fuera robusto y manejara correctamente diferentes situaciones.
+
+En resumen, este proyecto me permitió aplicar y mejorar mis habilidades de programación y pruebas automatizadas, y espero que pueda ser útil para otros desarrolladores que estén aprendiendo o buscando mejorar sus habilidades en estos temas. 
+
+## Autor
+
+Este proyecto fue desarrollado por Alexis E. Mata, un apasionado de la programación y la tecnología. 
+
+Con este proyecto me permitió aumentar y mejorar mis habilidades de programación y por ello, compartiré lo que he aprendido con otros desarrolladores. Si tienes preguntas o comentarios sobre este proyecto, no dudes en contactarme a través de mi perfil de GitHub.
+
+## Contribuciones
+
+Si deseas contribuir a este proyecto, ¡eres bienvenido! Siéntete libre de hacer un fork del repositorio y enviar un pull request con tus cambios. También puedes reportar cualquier problema o sugerencia utilizando la sección de "Issues" de este repositorio. Te agradezco de antemano por tu interés en este proyecto.

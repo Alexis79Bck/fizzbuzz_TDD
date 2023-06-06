@@ -1,8 +1,17 @@
 <?php
+/**
+ * Clase FizzBuzz
+ * La famosa serie FizzBuzz para un número natural es una sucesión desde 1 hasta N
+ * donde:
+ *     - Los números que sean múltiplos de 3 se cambian por Fizz.
+ *     - Los números que sean múltiplos de 5 se cambian por Buzz.
+ *     - Los números que sean múltiplos de 3 y 5 se cambian por FizzBuzz. 
+ * @author Alexis E. Mata <alexis.ed.mata@gmail.com>
+ * @created 01-06-2023
+ *
+ */
 
 namespace App\Classes;
-use Symfony\Component\Translation\Exception\InvalidArgumentException;
-
 class FizzBuzz
 {
     public $arrFizzBuzz;
